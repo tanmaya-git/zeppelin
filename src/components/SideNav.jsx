@@ -14,7 +14,7 @@ class SideNav extends Component {
             <NavItem eventKey={3} href="/list">
               List Of Notes
             </NavItem>
-            <NavItem eventKey={4} >
+            <NavItem eventKey={4} href="/create">
               Create New Note
             </NavItem>
             <NavItem eventKey={6} >

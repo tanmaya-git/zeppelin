@@ -5,6 +5,7 @@ import Home from './components/Home';
 import About from './components/About';
 import { Route} from 'react-router-dom';
 import ListNotes from './components/ListNotes';
+import Create from './components/Create';
 
 class App extends Component {
   render() {
@@ -15,6 +16,7 @@ class App extends Component {
         <Route exact path="/home" component={Home} />
         <Route exact path="/about" component={About} />
         <Route exact path="/list" component={ListNotes} />
+        <Route exact path="/create" component={Create} />
    
 
       </div>
