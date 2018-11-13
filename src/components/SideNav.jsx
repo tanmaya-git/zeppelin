@@ -11,13 +11,40 @@ class SideNav extends Component {
             <NavItem eventKey={2} href="/about">
               About
             </NavItem>
-            <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
-              <MenuItem eventKey={3.1}>Action</MenuItem>
-              <MenuItem eventKey={3.2}>Another action</MenuItem>
-              <MenuItem eventKey={3.3}>Something else here</MenuItem>
-              <MenuItem divider />
-              <MenuItem eventKey={3.3}>Separated link</MenuItem>
-            </NavDropdown>
+            <NavItem eventKey={3} href="/list">
+              List Of Notes
+            </NavItem>
+            <NavItem eventKey={4} >
+              Create New Note
+            </NavItem>
+            <NavItem eventKey={6} >
+              Delete Note
+            </NavItem>
+            <NavItem eventKey={7} >
+           
+            </NavItem>
+            <NavItem eventKey={8} >
+
+            </NavItem>
+            <NavItem eventKey={9} >
+
+            </NavItem>
+            <NavItem eventKey={10} >
+           
+            </NavItem>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+
+            <NavItem eventKey={11} >
+             External Link
+            </NavItem>
           </Nav>
     );
   }

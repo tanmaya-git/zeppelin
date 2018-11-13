@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Panel, Form, FormGroup, ControlLabel, FormControl, Button,Col } from 'react-bootstrap'
+import { Panel, Form, FormGroup, ControlLabel, FormControl, Button,Col, ButtonToolbar } from 'react-bootstrap'
 import SideNav from'./SideNav'
 class Home extends Component {
     render() {
@@ -13,8 +13,11 @@ class Home extends Component {
                 <Panel>
                     <Panel.Title>
                         <div className="pull-right" style={{padding:"5px"}}>
-                            <Button>Run</Button>
-                            <Button>Clear</Button>
+                           <ButtonToolbar>
+                              <Button  bsStyle="info" style={{paddingRight:"10px"}}>Run</Button>
+                    
+                            <Button  bsStyle="info">Clear</Button>
+                            </ButtonToolbar> 
                         </div>
                     </Panel.Title>
                     <Panel.Body>
@@ -26,14 +29,9 @@ class Home extends Component {
                     </Panel.Body>
                 </Panel>
            
-           <Button className="btn btn-primary">Add Paragraph</Button>
+           <Button className="btn btn-primary" pullRight>Add Paragraph</Button>
            </Col>
            </div>
-         {/* <Panel>
-             <Panel.body>
-                 
-             </Panel.body>
-         </Panel> */}
           </div>
     );
     }
