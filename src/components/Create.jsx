@@ -12,9 +12,11 @@ export default class Create extends Component{
                                 <FormControl componentClass="textarea" placeholder="Enter Name of Note" />
                             </FormGroup>
                             <FormGroup controlId="formControlsTextarea">
-                            <p style={{fontStyle:"Italic", fontSize:"15px", color:"green"}}>Paragraph: </p> <FormControl componentClass="textarea" placeholder="Paragraph"/>
-                            
-                               
+                            <p style={{fontStyle:"Italic", fontSize:"15px", color:"green"}}>Paragraph: < Button bsStyle="info"  style={{padding:"5px"}}> ADD + </Button></p> <FormControl componentClass="textarea" placeholder="Paragraph"/>  
+                            </FormGroup>
+                            <FormGroup controlId="formControlsTextarea">
+                            <p style={{fontStyle:"Italic", fontSize:"15px", color:"green"}}>Paragrah Text: </p> 
+                                <FormControl componentClass="textarea" placeholder="Paragraph text" />
                             </FormGroup>
                         </Form>
                         <ButtonToolbar pullRight>
