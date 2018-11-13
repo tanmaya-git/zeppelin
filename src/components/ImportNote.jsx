@@ -1,7 +1,8 @@
-import React,{Component} from 'react';
-import {Button,Form, FormGroup, FormControl, ButtonToolbar, Modal} from 'react-bootstrap';
+import React, { Component } from 'react';
+import { Panel, Form, FormGroup, ControlLabel, FormControl, Button,Col, ButtonToolbar, Modal } from 'react-bootstrap'
 
-export default class Create extends Component{
+export default class ImportNote extends Component {
+
     constructor(props, context) {
         super(props, context);
     
@@ -40,7 +41,7 @@ export default class Create extends Component{
         >
           <Modal.Header closeButton>
             <Modal.Title id="contained-modal-title">
-             Enter Name of Note **
+             Import File JSON
             </Modal.Title>
           </Modal.Header>
           <Modal.Body>
@@ -50,16 +51,18 @@ export default class Create extends Component{
           <FormControl
             type="text"
             value={this.state.value}
-            placeholder="Enter text"
+            placeholder="Enter name of file to upload"
            
           />
-          
+          <br/>
+          <br/>
+         <FormControl type="file" placeholder="Name" required /> 
         </FormGroup>
       </Form>
           </Modal.Body>
           <Modal.Footer>
               <ButtonToolbar>
-          <Button bsStyle="primary" onClick={this.handleSave}>Save</Button>
+          <Button bsStyle="primary" onClick={this.handleSave}>Save Upload</Button>
             <Button onClick={this.handleHide}>Close</Button>
             </ButtonToolbar>
           </Modal.Footer>
@@ -67,5 +70,5 @@ export default class Create extends Component{
            
             </div>
         )
-    } 
+    }
 }

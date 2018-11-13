@@ -6,6 +6,7 @@ import About from './components/About';
 import { Route} from 'react-router-dom';
 import ListNotes from './components/ListNotes';
 import Create from './components/Create';
+import ImportNote from './components/ImportNote';
 
 class App extends Component {
   render() {
@@ -17,6 +18,7 @@ class App extends Component {
         <Route exact path="/about" component={About} />
         <Route exact path="/list" component={ListNotes} />
         <Route exact path="/create" component={Create} />
+        <Route exact path="/import" component={ImportNote} />
    
 
       </div>

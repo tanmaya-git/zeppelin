@@ -20,8 +20,8 @@ class SideNav extends Component {
             <NavItem eventKey={6} >
               Delete Note
             </NavItem>
-            <NavItem eventKey={7} >
-           
+            <NavItem eventKey={7} href="/import">
+            Import Note
             </NavItem>
             <NavItem eventKey={8} >
 

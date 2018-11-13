@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import {Navbar,Nav,NavDropdown,NavItem,MenuItem} from 'react-bootstrap';
-
+import {Navbar,Nav,NavDropdown,NavItem,MenuItem, Image} from 'react-bootstrap';
+import kylo from './kylo.jpg';
+import zeppel from './zeppel.jpg';
 
 export default class NavigationBar extends Component {
   render() {
@@ -15,10 +16,10 @@ export default class NavigationBar extends Component {
         <Navbar.Collapse>
           <Nav pullRight>
             <NavItem eventKey={1} href="/home">
-              Home
+            <Image src = {kylo} style ={{width:"45px" ,height:"28pxpx", paddingTop:"0px"}}/>
             </NavItem>
             <NavItem eventKey={2} href="/about">
-              About
+            <Image src = {zeppel} style ={{width:"45px" ,height:"28pxpx", paddingTop:"0px"}}/>
             </NavItem>
             {/* <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
               <MenuItem eventKey={3.1}>Action</MenuItem>
