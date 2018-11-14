@@ -1,36 +1,50 @@
 import React,{Component} from 'react';
 import {Button,Form, FormGroup, FormControl, ButtonToolbar, Modal} from 'react-bootstrap';
+import axios from 'axios';
 
 export default class Create extends Component{
     constructor(props, context) {
         super(props, context);
-    
+
+        this.handleChange = this.handleChange.bind(this);
+        // this.handleShow = this.handleShow.bind(this);
         this.handleHide = this.handleHide.bind(this);
         this.handleSave = this.handleSave.bind(this);
     
         this.state = {
-          show: true
+          show: true,
+          note :'',
         };
       }
     
       handleHide() {
         this.setState({ show: false });
       }
+      // handleshow() {
+      //   this.setState({ show: true });
+      // }
       handleSave() {
-       console.log('handle event and save files');
+        console.log(this.state.note);
+        axios.post(`http://35.190.187.2:9090/api/notebook`, {"name": this.state.note})
+      .then(res => {
+        console.log(res.data);
+        this.setState({ show: false });
+        
+      })
+     
+      }
+
+      handleChange(event){
+          console.log(event.target.name, event.target.value);
+          this.setState({note:event.target.value});
+       
       }
     render()
     {
         return(
           
                 <div className="modal-container" style={{ height: 200 }}>
-        {/* <Button
-          bsStyle="primary"
-          bsSize="large"
-          onClick={() => this.setState({ show: true })}
-        >
-          Launch contained modal
-        </Button> */}
+      
 
         <Modal
           show={this.state.show}
@@ -50,8 +64,9 @@ export default class Create extends Component{
           <FormControl
             type="text"
             value={this.state.value}
-            placeholder="Enter text"
-           
+            name = "noteName"
+            placeholder="Enter name of the NoteBook"
+            onChange ={this.handleChange}
           />
           
         </FormGroup>

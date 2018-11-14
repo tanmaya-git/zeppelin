@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Panel, Form, FormGroup, ControlLabel, FormControl, Button,Col, ButtonToolbar } from 'react-bootstrap'
-import SideNav from'./SideNav'
+import SideNav from'./SideNav';
+import Create from './Create';
 class Home extends Component {
     render() {
         return (
@@ -31,6 +32,7 @@ class Home extends Component {
            
            <Button className="btn btn-primary" pullRight>Add Paragraph</Button>
            </Col>
+           {/* <Create /> */}
            </div>
           </div>
     );

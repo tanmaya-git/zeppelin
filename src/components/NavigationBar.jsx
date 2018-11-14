@@ -16,10 +16,10 @@ export default class NavigationBar extends Component {
         <Navbar.Collapse>
           <Nav pullRight>
             <NavItem eventKey={1} href="/home">
-            <Image src = {kylo} style ={{width:"45px" ,height:"28pxpx", paddingTop:"0px"}}/>
+            Help
             </NavItem>
             <NavItem eventKey={2} href="/about">
-            <Image src = {zeppel} style ={{width:"45px" ,height:"28pxpx", paddingTop:"0px"}}/>
+            Logout
             </NavItem>
             {/* <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
               <MenuItem eventKey={3.1}>Action</MenuItem>
