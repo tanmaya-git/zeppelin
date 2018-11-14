@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Panel, Form, FormGroup, ControlLabel, FormControl, Button,ButtonToolbar, Col } from 'react-bootstrap'
 import SideNav from './SideNav'
 class Home extends Component {
+    
     render() {
         return (
             <div className="container-fluid">
@@ -29,7 +30,7 @@ class Home extends Component {
                             </Panel.Body>
                         </Panel>
 
-                        <Button className="btn btn-primary" pullRight>Add Paragraph</Button>
+                        <Button className="btn btn-primary pull-right" >Add Paragraph</Button>
                     </Col>
                 </div>
             </div>
