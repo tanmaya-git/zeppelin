@@ -51,9 +51,8 @@ export default class ImportNote extends Component {
           <FormControl
             type="text"
             value={this.state.value}
-            placeholder="Enter name of file to upload"
-           
-          />
+            placeholder="Enter name of the file to upload"
+            required />
           <br/>
           <br/>
          <FormControl type="file" placeholder="Name" required /> 
