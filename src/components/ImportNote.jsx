@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Panel, Form, FormGroup, ControlLabel, FormControl, Button,Col, ButtonToolbar, Modal } from 'react-bootstrap'
 import axios from 'axios';
+import { Redirect, Router } from 'react-router-dom';
+import ListNotes from './ListNotes';
 
 export default class ImportNote extends Component {
 
@@ -16,10 +18,10 @@ export default class ImportNote extends Component {
         };
       }
 
-      handleUpload(){
+    //   handleUpload(){
       
     
-    }
+    // }
       handleHide() {
         this.setState({ show: false });
       }
@@ -29,6 +31,7 @@ export default class ImportNote extends Component {
       .then(res => {
         console.log(res.data);
         this.setState({ show: false });
+        
         
       })
       }
@@ -51,7 +54,7 @@ export default class ImportNote extends Component {
         >
           Launch contained modal
         </Button> */}
-
+        <ListNotes/>
         <Modal
           show={this.state.show}
           onHide={this.handleHide}
