@@ -8,11 +8,16 @@ export default class ListNotes extends Component {
   constructor(props, context) {
     super(props, context);
     this.deleteNote = this.deleteNote.bind(this);
+    // this.importNote = this.importNote.bind(this);
   this.state = {
     persons: []
   };
  
 }
+
+// importNote(){
+
+// }
 
 deleteNote(index){
 console.log(index);
@@ -54,6 +59,7 @@ componentDidMount() {
           <tr key={ person.id}>            
             <td>{ person.name} 
             <Button bsStyle="danger" style={{marginLeft:"90%",marginRight :"10%"}} onClick ={()=> this.deleteNote(person.id)}>X</Button>
+            {/* <Button bsStyle="info" style={{marginLeft:"90%",marginRight :"10%"}} onClick ={()=> this.importNote(person.id)}>Edit</Button> */}
             </td>  
           </tr>
               )
