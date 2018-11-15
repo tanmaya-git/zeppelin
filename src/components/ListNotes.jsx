@@ -14,8 +14,17 @@ export default class ListNotes extends Component {
  
 }
 
-deleteNote(e){
-console.log("dkjshdks");
+deleteNote(index){
+console.log(index);
+// const persons =this.state.persons;
+// delete persons[index];
+// this.setState({persons});
+
+axios.delete(`http://35.190.187.2:9090/api/notebook/`+index)
+.then(res => {
+  console.log(res);
+  console.log(res.data);
+})
 }
 
 componentDidMount() {
@@ -44,7 +53,7 @@ componentDidMount() {
         return(
           <tr key={ person.id}>            
             <td>{ person.name} 
-            <Button bsStyle="danger" style={{marginLeft:"90%",marginRight :"10%"}} onClick ={this.deleteNote}>X</Button>
+            <Button bsStyle="danger" style={{marginLeft:"90%",marginRight :"10%"}} onClick ={()=> this.deleteNote(person.id)}>X</Button>
             </td>  
           </tr>
               )
