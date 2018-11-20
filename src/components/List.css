@@ -1,0 +1,14 @@
+.List{
+    border-color: aqua;
+
+}
+.List_content {
+border-spacing: "50px";
+margin-top :"300px";
+padding-top:"2px";
+padding-bottom:"2px";
+color: "black";
+margin-Left: "50px";
+border-Bottom: "2px solid white";
+border-Top:"2px solid white"
+}
